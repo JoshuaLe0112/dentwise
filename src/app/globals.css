@@ -172,3 +172,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+/*Add cursor pointer to buttons by default - coming from tailwind docs*/
+@layer base {
+  button:not(:disabled),
+  [role = "button"]:not(:disabled) {
+    cursor:pointer;
+  }
+} 
