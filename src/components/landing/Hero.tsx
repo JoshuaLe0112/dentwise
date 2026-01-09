@@ -1,5 +1,8 @@
 "use client";
+import { SignUpButton } from '@clerk/nextjs';
 import React from 'react'
+import { Button } from '../ui/button';
+import { CalendarIcon, MicIcon } from 'lucide-react';
 
 function Hero() {
   return <section className="relative h-screen flex items-center overflow-hidden pt-20">
@@ -22,7 +25,7 @@ function Hero() {
                 <div className = "space-y-10">
 
                     <div className = "space-y-6">
-                        {/**BAGDE */}
+                          {/**BAGDE */}
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-primary/5 rounded-full border border-primary/20 backdrop-blur-sm">
                             
@@ -34,9 +37,44 @@ function Hero() {
 
                             </div>
 
-                         {/* MAIN HEADING */}       
+                          {/* MAIN HEADING */}       
+                           <h1 className = "text-5xl md;text-6xl lg:text-7xl font-bold tracking-tight">                            
+                              <span className = "bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                                  Your Dental      
+                              </span>                            
+                              <br />
+                                <span className = "bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                                    Questions
+                                </span>                              
+                              <br />
+                                <span className = "bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                                    Answered Instantly
+                                </span>
+                           </h1>
 
-                          </div>          
+                           {/*SUPTITILE*/}
+                           <p className = "text-lg text-muted-foreground leading-relaxed max-w-xl font-medium">
+                              Chat with our AI dental assistant for instant advice, book smart appointments, and 
+                              get pernsonalized care recommendations. Availabe 24/7.
+                           </p>
+                      </div>          
+
+                            {/*CTA BUTTONS*/}
+                            <div className = "flex flex-col sm:felx-row gap-4">
+                                <SignUpButton mode = "modal">
+                                    <Button size = "lg">
+                                      <MicIcon className = "mr-2 size-5" />
+                                      Try Voice Agent
+                                    </Button>
+                                </SignUpButton>
+
+                                <SignUpButton mode = "modal">
+                                    <Button size = "lg">
+                                      <CalendarIcon className = "mr-2 size-5" />
+                                      Book Appointment
+                                    </Button>
+                                </SignUpButton>
+                            </div>
 
                     </div>
                   
