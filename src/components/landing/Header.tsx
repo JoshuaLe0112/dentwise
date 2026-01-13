@@ -31,9 +31,9 @@ function Header() {
                 </a>
               </div>
 
-              <div className = "flex items-center gap-3">
+              <div className = "flex items-center gap-3 ">
                 <SignInButton mode = "modal">
-                   <Button variant={"ghost"} size ={"sm"}>
+                   <Button variant={"ghost"} size ={"sm"} >
                       Login
                    </Button> 
                 </SignInButton>
