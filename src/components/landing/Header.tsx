@@ -14,7 +14,7 @@ function Header() {
 
                <Image src = {"/logo.png"} alt = "DentWise Logo" width = {32} height = {32} className = "w-11"/>
 
-                  <span className = "font-semibold text-lg">DentWise</span>
+                  <span className = "font-semibold text-lg text-foreground">DentWise</span>
 
             </Link>
 
