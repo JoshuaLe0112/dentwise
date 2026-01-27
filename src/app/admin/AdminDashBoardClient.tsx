@@ -7,6 +7,7 @@ import { useUser } from '@clerk/nextjs';
 import { SettingsIcon } from 'lucide-react'
 import { Appointment } from "@prisma/client";
 import React from 'react'
+import DoctorsManagement from '@/components/admin/DoctorsManagement';
 
 function AdminDashBoardClient() {
     //Get doctors, get appointments
@@ -53,20 +54,23 @@ function AdminDashBoardClient() {
               <SettingsIcon className="w-16 h-16 text-primary" />
             </div>
           </div>
-        </div>
+                </div>
 
             <AdminStats
                 totalDoctors={stats.totalDoctors}
                 activeDoctors={stats.activeDoctors}
                 totalAppointments={stats.totalAppointments}
                 completedAppointment={stats.completedAppointments}
+                  />
 
-            />
+                  <DoctorsManagement/>
 
-
+                  
+                    
+                  
             </div>
         </div>
-  )
+  );
 }
 
 export default AdminDashBoardClient
